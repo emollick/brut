@@ -73,3 +73,7 @@ node tools/imports.mjs
 - [Archivo](https://github.com/Omnibus-Type/Archivo) and [IBM Plex Mono](https://github.com/IBM/plex), both under the SIL Open Font License 1.1, in `site/fonts/`.
 
 The sounds are synthesised in the browser and the textures are computed in the shaders; there are no other assets.
+
+## Licence
+
+MIT; see [LICENSE](LICENSE). The library and typefaces listed above keep their own licences.
