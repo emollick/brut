@@ -1,0 +1,21 @@
+# BRUT is a static site: no build step, publish the folder as it is.
+[build]
+  publish = "site"
+
+# Nothing is fingerprinted, so the page and its modules are always revalidated.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+
+# The library and the typefaces do not change between deploys.
+[[headers]]
+  for = "/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
